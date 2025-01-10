@@ -18,9 +18,8 @@ header = {
     'Upgrade-Insecure-Requests':'1',
     'user-agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",}
 # 从本地m3u8文件中提取.ts文件的链接
-#https://vod1eu16.128100.xyz/hls/KNhsHiD9KHw/拼接
 # 从本地m3u8文件中提取.ts文件的链接
-m3u8_file = r"E:\python\learningproject\spider\attachmentvideo1\failed_links.txt"
+m3u8_file = "./failed_links.txt"
 with open(m3u8_file, 'r') as file:
     m3u8_content = file.read()
     ts_files=m3u8_content.split('\n')
