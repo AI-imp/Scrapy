@@ -18,12 +18,11 @@ header = {
     'Upgrade-Insecure-Requests':'1',
     'user-agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",}
 # 从本地m3u8文件中提取.ts文件的链接
-#https://vod1eu16.128100.xyz/hls/KNhsHiD9KHw/拼接
 # 从本地m3u8文件中提取.ts文件的链接
-m3u8_file = r"E:\python\learningproject\spider\attachmentvideo1\index.m3u8"
+m3u8_file = "./index.m3u8"
 with open(m3u8_file, 'r') as file:
     m3u8_content = file.read()
-ts_files = [f"https://vod1eu16.128100.xyz/hls/KNhsHiD9KHw/{line.strip()}" for line in m3u8_content.split('\n') if '.ts' in line]
+ts_files = [f"https://your_scrapy__website/{line.strip()}" for line in m3u8_content.split('\n') if '.ts' in line]
 #下载每个.ts文件/视频片段
 # 下载视频片段
 for ts_file in ts_files:
